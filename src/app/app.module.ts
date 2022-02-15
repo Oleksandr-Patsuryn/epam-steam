@@ -16,7 +16,7 @@ import { FriendListComponent } from './components/friend-list/friend-list.compon
     LoginComponent,
     HeaderComponent,
     ProfileComponent,
-    ProfileWrapperComponent
+    ProfileWrapperComponent,
     FriendComponent,
     FriendSerchComponent,
     FriendListComponent
