@@ -14,3 +14,8 @@
   padding: 20px 45px;
   background: #fff;
 }
+
+.games-search {
+  display: flex;
+  gap: 15px;
+}
