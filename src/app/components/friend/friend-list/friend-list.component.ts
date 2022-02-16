@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-friend-list',
@@ -11,9 +11,13 @@ export class FriendListComponent implements OnInit {
   public addBtnClass = 'add-btn';
   public friendShow = 'friend-list-box'
   public deleteFriend = 'friend-delete'
+  public ShowFriend = true
 
   constructor() {
   }
+  @Input() name: string = "";
+  @Input() friend: object| undefined;
+
 
   ngOnInit(): void {
   }
