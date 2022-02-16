@@ -1,5 +1,4 @@
 .friend-list {
-
   height: 48px;
   width: 1080px;
   left: 60px;
@@ -24,6 +23,10 @@
   padding: 8px;
 }
 
+.friend-delete {
+  display: none;
+}
+
 .delete-btn, .add-btn {
   background: #FF6F6F;
   color: white;
@@ -41,5 +44,7 @@
   background: #6C69FF;
   height: 32px;
   width: 100px;
-
+}
+.add-btn:active {
+  visibility: hidden;
 }

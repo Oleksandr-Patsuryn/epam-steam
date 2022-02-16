@@ -25,7 +25,8 @@
 
 .search-box {
   position: relative;
-  margin: 0 0 20px 0;
+  margin: 20px 0;
+  font-size: 14px;
 }
 
 .friend-search {
@@ -36,6 +37,7 @@
   height: 32px;
   -webkit-border-radius: 5px;
   overflow: hidden;
+  font-size: 14px;
 }
 
 

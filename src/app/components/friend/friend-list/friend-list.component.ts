@@ -9,6 +9,8 @@ export class FriendListComponent implements OnInit {
 
   public deleteBtnClass = 'delete-btn';
   public addBtnClass = 'add-btn';
+  public friendShow = 'friend-list-box'
+  public deleteFriend = 'friend-delete'
 
   constructor() {
   }
@@ -17,7 +19,7 @@ export class FriendListComponent implements OnInit {
   }
 
   removeFriend(){
-    this.deleteBtnClass = this.addBtnClass
+    this.friendShow = this.deleteFriend
   }
 
 }
