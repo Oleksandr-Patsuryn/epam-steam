@@ -1,0 +1,10 @@
+<div  class="friend-list">
+  <div *ngIf="ShowFriend" class="friend-list-box">
+    <span>Name and Login</span>
+    <button
+      [classList]="deleteBtnClass"
+      (click)="ShowFriend = false"
+    >Remove friend
+    </button>
+  </div>
+</div>
