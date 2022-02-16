@@ -11,11 +11,15 @@ import {GamesComponent} from "./components/games/games.component";
 import {LibraryComponent} from "./components/library/library.component";
 import {HttpClientModule} from "@angular/common/http";
 import {UsersService} from "./components/users.service";
+import { ValidatorService } from './validator.service';
+import { RegComponent } from './components/reg/reg.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    RegComponent,
     HeaderComponent,
     ProfileComponent,
     GamesComponent,
@@ -23,11 +27,14 @@ import {UsersService} from "./components/users.service";
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    FormsModule,
     FriendModule,
     HttpClientModule
   ],
-  providers: [UsersService],
+  providers: [
+    ValidatorService,
+    UsersService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
