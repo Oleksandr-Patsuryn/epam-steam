@@ -22,11 +22,9 @@
   width: 1080px;
   border-radius: 4px;
   padding: 8px;
-
-
 }
 
-.delete-button {
+.delete-btn, .add-btn {
   background: #FF6F6F;
   color: white;
   font-weight: normal;
@@ -35,9 +33,13 @@
   font-size: 14px;
   height: 32px;
   width: 125px;
-  left: 947px;
   top: 8px;
   border-radius: 4px;
-  padding: 8px 16px 8px 16px;
+}
+
+.add-btn {
+  background: #6C69FF;
+  height: 32px;
+  width: 100px;
 
 }
