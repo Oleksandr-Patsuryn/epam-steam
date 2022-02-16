@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FriendSerchComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  getName(){
+    console.log()
   }
 
 }

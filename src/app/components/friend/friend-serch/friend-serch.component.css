@@ -1,0 +1,40 @@
+.friend-search {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  height: 32px;
+  -webkit-border-radius: 5px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+
+.search-text {
+  width: 100%;
+  font-size: 14px;
+  color: #ddd;
+  border: 1px solid #999;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.search-btn {
+  height: 32px;
+  width: 80px;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  line-height: 32px;
+  border-width: 0;
+  background: #6C69FF;
+  -webkit-border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.search-box {
+  position: relative;
+  margin: 20px 0;
+  font-size: 14px;
+}

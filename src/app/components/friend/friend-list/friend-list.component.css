@@ -45,6 +45,7 @@
   height: 32px;
   width: 100px;
 }
+
 .add-btn:active {
   visibility: hidden;
 }
