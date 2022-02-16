@@ -1,0 +1,16 @@
+.container {
+  margin-top: 176px;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.games-container {
+  width: 1200px;
+  min-height: 780px;
+  padding: 20px 45px;
+  background: #fff;
+}
