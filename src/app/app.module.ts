@@ -10,10 +10,14 @@ import {FriendModule} from "./components/friend/friend.module"
 import {GamesComponent} from "./components/games/games.component";
 import {LibraryComponent} from "./components/library/library.component";
 import {HttpClientModule} from "@angular/common/http";
-import {UsersService} from "./components/users.service";
+import {UsersService} from "./service/users.service";
+import {FormsModule} from "@angular/forms";
+import {SearchPipe} from "./pipes/search.pipe";
+import {GamesService} from "./service/games.service";
 import { ValidatorService } from './validator.service';
 import { RegComponent } from './components/reg/reg.component';
 import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -23,18 +27,17 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     ProfileComponent,
     GamesComponent,
-    LibraryComponent
+    LibraryComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     FriendModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [
-    ValidatorService,
-    UsersService
-  ],
+  providers: [ValidatorService, UsersService, GamesService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
