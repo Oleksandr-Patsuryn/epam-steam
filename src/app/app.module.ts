@@ -29,7 +29,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     FormsModule,
     FriendModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
   ],
   providers: [
     ValidatorService,
