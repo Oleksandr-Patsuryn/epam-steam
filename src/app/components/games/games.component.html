@@ -1,18 +1,54 @@
-<div class="container">
+<div class="container-main">
   <div class="games-container">
     <h2> Games</h2>
     <div class="search-box">
       <span>Search Games</span>
       <form action="" method="get" class="games-search">
-        <input type="text" class="form-control" placeholder="Search Games">
-        <button class="btn btn-primary">Search</button>
+        <input name="search" type="text" class="form-control" placeholder="Search Games" [(ngModel)]="searchGame"
+               [ngModelOptions]="{standalone:true}">
+        <button class="btn btn-primary" (click)="searchFilter(searchGame)">Search</button>
       </form>
     </div>
-    <h2>Featured Games</h2>
+    <h2 class="featured-games">Featured Games</h2>
     <div class="games-list">
-      <ul class="list-group">
-        <li class="list-group-item "></li>
+      <ul class="list-group games-grid">
+        <li class="games-card" *ngFor="let game of activeGames">
+            <div class="game-main">
+              <h2 class="game-name">{{game.name}}</h2>
+              <p class="game-price">{{game.price}} uah</p>
+            </div>
+            <div class="game-secondary">
+              <p class="game-description">{{game.description}}</p>
+              <a href="#" class="btn btn-primary games-btn">Add to library</a>
+            </div>
+        </li>
       </ul>
+
+      <div class="games-filter">
+        <div class="filter-price">
+          <p class="filter-header">Filter by price</p>
+          <div class="slider">
+            <input name="range" type="range" class="form-range" min="0" max="1500" step="300" [(ngModel)]="value"
+                   (change)="changeValue()">
+            <p>{{value}}</p>
+          </div>
+        </div>
+        <div class="filter-tag">
+          <p class="filter-header">Filter by tag</p>
+          <div class="form-checkbox">
+            <input type="checkbox" class="form-check-input" name="indie" value="indie" checked>
+            <label class="form-check-label">Indie</label>
+          </div>
+          <div class="form-checkbox">
+            <input type="checkbox" class="form-check-input" name="action" value="action" checked>
+            <label class="form-check-label">Action</label>
+          </div>
+          <div class="form-checkbox">
+            <input type="checkbox" class="form-check-input" name="adventure" value="adventure" checked>
+            <label class="form-check-label">Adventure</label>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
