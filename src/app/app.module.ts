@@ -16,7 +16,6 @@ import {SearchPipe} from "./pipes/search.pipe";
 import {GamesService} from "./service/games.service";
 import { ValidatorService } from './validator.service';
 import { RegComponent } from './components/reg/reg.component';
-import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -28,14 +27,15 @@ import { FormsModule } from '@angular/forms';
     ProfileComponent,
     GamesComponent,
     LibraryComponent,
-    SearchPipe
+    SearchPipe,
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
     FriendModule,
     HttpClientModule,
-    FormsModule
+    AppRoutingModule
   ],
   providers: [ValidatorService, UsersService, GamesService],
   bootstrap: [AppComponent]
