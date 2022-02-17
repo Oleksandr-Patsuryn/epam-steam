@@ -14,12 +14,16 @@ import {UsersService} from "./service/users.service";
 import {FormsModule} from "@angular/forms";
 import {SearchPipe} from "./pipes/search.pipe";
 import {GamesService} from "./service/games.service";
+import { ValidatorService } from './validator.service';
+import { RegComponent } from './components/reg/reg.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    RegComponent,
     HeaderComponent,
     ProfileComponent,
     GamesComponent,
@@ -28,12 +32,12 @@ import {GamesService} from "./service/games.service";
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    FormsModule,
     FriendModule,
     HttpClientModule,
     FormsModule
   ],
-  providers: [UsersService, GamesService],
+  providers: [ValidatorService, UsersService, GamesService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
