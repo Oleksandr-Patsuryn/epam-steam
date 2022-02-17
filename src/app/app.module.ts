@@ -11,7 +11,6 @@ import {GamesComponent} from "./components/games/games.component";
 import {LibraryComponent} from "./components/library/library.component";
 import {HttpClientModule} from "@angular/common/http";
 import {UsersService} from "./components/users.service";
-import { ValidatorService } from './validator.service';
 import { RegComponent } from './components/reg/reg.component';
 import { FormsModule } from '@angular/forms';
 
@@ -33,7 +32,6 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
   ],
   providers: [
-    ValidatorService,
     UsersService
   ],
   bootstrap: [AppComponent]

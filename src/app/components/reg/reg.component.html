@@ -12,7 +12,7 @@
             <input #fieldCheck #PasswordConfirmField ="ngModel" required type="password" id="password2" [(ngModel)]= "password2" name="password2" placeholder="Confirm your password"><br>
             <div class="alert-message-3" [hidden]="PasswordConfirmField.valid || PasswordConfirmField.pristine">This field is obligatory!</div>
             <input type="submit"  class="sign-button" value="Sign Up">
-            <div class="sign-in-wrapper" routerLinkActive="active"><a [routerLink]="'/login'" class="sign-in">Already has an account?<br>Sign in</a></div>
+            <div class="sign-in-wrapper"><a href="#" class="sign-in">Already has an account?<br>Sign in</a></div>
         </form>
     </div>
 </div>
