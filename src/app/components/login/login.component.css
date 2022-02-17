@@ -66,3 +66,16 @@
     border-radius: 5px;
 }
 */
+.ng-valid[required], .ng-valid.required {
+    border: 2px solid #6C69FF;
+}
+.ng-invalid:not(form) {
+    border: 1px solid red;
+    
+}
+.alert-message, .alert-message-2 {
+    color: red;
+    margin-top: -15px;
+    text-align: center;
+    font-size: 15px;
+}

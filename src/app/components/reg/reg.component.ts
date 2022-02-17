@@ -17,15 +17,21 @@ export class RegComponent implements OnInit {
   }
   
   onSubmit() {
-    if(this.password === this.password2) {
+    if(this.email == undefined || this.password == undefined || this.password2 == undefined) {
+      alert("Please, fill all fields!")
+    } else if (this.email == '' || this.password == '' || this.password2 == ''){
+      alert("Please, fill all fields!")
+    } else if (!this.email.match('@')){
+      alert("This email is incorrect!")
+    } else if(this.password !== this.password2) {
+      alert('Please, confirm your password!')
+    }
+      else {
       const user = {
         email: this.email,
         password: this.password
       }
       console.log(user);
-    }
-    else {
-      alert("Please, enter correct password!")
     }
   };
 

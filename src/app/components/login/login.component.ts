@@ -17,11 +17,20 @@ export class LoginComponent implements OnInit {
   }
   
   onSubmit() {
-    const user = {
-      email: this.email,
-      password: this.password
+    if(this.email == undefined || this.password == undefined) {
+      alert("Please, fill all fields!")
+    } else if (this.email == '' || this.password == ''){
+      alert("Please, fill all fields!")
+    } else if (!this.email.match('@')){
+      alert("This email is incorrect!")
     }
-    console.log(user);
+      else {
+      const user = {
+        email: this.email,
+        password: this.password
+      }
+      console.log(user);
+    }
   };
   //User = this.onSubmit()
   //check:boolean = this.FormValidator.checkEmail(this.User.email);

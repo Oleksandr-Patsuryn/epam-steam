@@ -3,9 +3,11 @@
         <h1 class="title">Sign In</h1>
         <form (submit)="onSubmit()">
             <label for="email">Email</label><br>
-            <input type="email" [(ngModel)]= "email" id="email" name="email" placeholder="Email"><br>
+            <input #fieldCheck #EmailField ="ngModel" required type="email" [(ngModel)]= "email" id="email" name="email" placeholder="Email"><br>
+            <div class="alert-message" [hidden]="EmailField.valid || EmailField.pristine">This field is obligatory!</div>
             <label for="password">Password</label><br>
-            <input type="password" [(ngModel)]= "password" id="password" name="password" placeholder="Password"><br>
+            <input #fieldCheck #PasswordField ="ngModel" required type="password" [(ngModel)]= "password" id="password" name="password" placeholder="Password"><br>
+            <div class="alert-message-2" [hidden]="PasswordField.valid || PasswordField.pristine">This field is obligatory!</div>
             <input type="submit"  class="sign-button" value="Sign In">
         </form>
     </div>

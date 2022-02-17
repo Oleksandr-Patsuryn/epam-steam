@@ -71,3 +71,10 @@
         height: 450px;
     }
  }
+.alert-message, .alert-message-2, .alert-message-3 {
+    color: red;
+    margin-top: -5px;
+    text-align: center;
+    font-size: 15px;
+}
+
