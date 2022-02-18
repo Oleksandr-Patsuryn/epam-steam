@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AddUserService } from 'src/app/add-user-service'
 
 @Component({
   selector: 'app-reg',
@@ -11,7 +12,7 @@ export class RegComponent implements OnInit {
   password!: string;
   password2!: string;
 
-  constructor() {}
+  constructor(private addUserService: AddUserService) {}
 
   ngOnInit(): void {
   }
@@ -27,12 +28,27 @@ export class RegComponent implements OnInit {
       alert('Please, confirm your password!')
     }
       else {
+        this.addUserService
+        .addUser(this.email, this.password)
+        .subscribe((json) => {
+          console.log(json)
+    });
+        /*
       const user = {
         email: this.email,
         password: this.password
-      }
-      console.log(user);
+      }*/
+      //console.log(user);
     }
+    
   };
+/*
+  addUser() {
+    this.addUserService
+    .addUser(this.email, this.password)
+    .subscribe((json) => {
+      console.log(json)
+    });
+  }*/
 
 }

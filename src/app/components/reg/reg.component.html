@@ -1,7 +1,7 @@
 <div class="container">
     <div class="login-container">
         <h1 class="title">Sign Up</h1>
-        <form (submit)="onSubmit()">
+        <form (submit)="onSubmit()" >
             <label for="email">Email</label><br>
             <input #EmailField ="ngModel" required type="email" id="email" [(ngModel)]= "email" name="email" placeholder="Email"><br>
             <div class="alert-message" [hidden]="EmailField.valid || EmailField.pristine">This field is obligatory!</div>
@@ -16,3 +16,4 @@
         </form>
     </div>
 </div>
+<!--(click)="addUser()"-->

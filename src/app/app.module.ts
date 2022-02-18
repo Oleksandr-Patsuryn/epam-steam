@@ -14,6 +14,8 @@ import {UsersService} from "./components/users.service";
 import { RegComponent } from './components/reg/reg.component';
 import { FormsModule } from '@angular/forms';
 
+import { AddUserService } from 'src/app/add-user-service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,9 +32,11 @@ import { FormsModule } from '@angular/forms';
     FriendModule,
     HttpClientModule,
     AppRoutingModule,
+
   ],
   providers: [
-    UsersService
+    UsersService,
+    AddUserService,
   ],
   bootstrap: [AppComponent]
 })

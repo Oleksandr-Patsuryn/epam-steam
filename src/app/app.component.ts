@@ -17,11 +17,12 @@ export class AppComponent implements OnInit{
   ngOnInit(): void {
 
   }
-
+/*
   loadUsers() {
     this.usersService.getUsers().subscribe((users) => {
         console.log(users);
       }
     )
   }
+  */
 }
