@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AddUserService } from 'src/app/add-user-service'
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,7 @@ export class LoginComponent implements OnInit {
   email!: string;
   password!: string;
 
-  constructor() {}
+  constructor(private getUserService: AddUserService) {}
 
   ngOnInit(): void {
   }
@@ -24,13 +25,19 @@ export class LoginComponent implements OnInit {
       alert("This email is incorrect!")
     }
       else {
-      const user = {
-        email: this.email,
-        password: this.password
-      }
-      console.log(user);
+        this.getUserService
+        .getData()
+        .subscribe((response) => {
+          //console.log(response)
+          
+          for (let key in response) {
+            console.log(response);
+          }
+        })
+        const user = {
+          email: this.email,
+          password: this.password
+        }
     }
   };
-  //User = this.onSubmit()
-  //check:boolean = this.FormValidator.checkEmail(this.User.email);
 }
