@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {UsersService} from "./service/users.service";
 import {GamesService} from "./service/games.service";
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,12 +13,13 @@ export class AppComponent implements OnInit {
 
   users = [];
 
-  constructor(private usersService: UsersService, private gamesService: GamesService) {
+  constructor(private usersService: UsersService, private gamesService: GamesService,) {
   }
 
   ngOnInit(): void {
 
   }
+
 
   loadUsers() {
     this.usersService.getUsers().subscribe((users) => {

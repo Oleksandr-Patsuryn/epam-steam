@@ -16,6 +16,7 @@ import {SearchPipe} from "./pipes/search.pipe";
 import {GamesService} from "./service/games.service";
 import { ValidatorService } from './validator.service';
 import { RegComponent } from './components/reg/reg.component';
+import {FriendsService} from "./service/friends.service";
 
 
 @NgModule({
@@ -37,7 +38,7 @@ import { RegComponent } from './components/reg/reg.component';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [ValidatorService, UsersService, GamesService],
+  providers: [ValidatorService, UsersService, GamesService, FriendsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

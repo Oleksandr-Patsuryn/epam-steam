@@ -6,14 +6,14 @@
       <app-friend-serch></app-friend-serch>
       <div class="my-friends">
         <h2>My Friends</h2>
-        <button class="add-btn" >Add friend</button>
+        <button class="add-btn" (click)="addFriend()">Add friend</button>
         <div class="friend-list-box">
-          <app-friend-list [name]="name"></app-friend-list>
+          <app-friend-list></app-friend-list>
           <app-friend-list></app-friend-list>
           <app-friend-list></app-friend-list>
           <app-friend-list></app-friend-list>
         </div>
-      </div>
+      </div>`
     </div>
   </section>
 </div>

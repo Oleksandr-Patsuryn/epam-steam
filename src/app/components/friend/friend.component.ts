@@ -1,4 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit} from '@angular/core';
+import {FriendsService} from "../../service/friends.service";
+import {Friend} from "../../service/friends.service";
+
 
 @Component({
   selector: 'app-friend',
@@ -7,11 +10,27 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class FriendComponent implements OnInit {
 
-  @Input() name: string = ''
+  friends:  any = [];
+  addedFriends: any = [];
+  searchFriend: string = '';
 
-  constructor() { }
+
+  constructor(
+    private friendService: FriendsService,
+  ) { }
 
   ngOnInit(): void {
+
+  }
+
+
+  addFriend() {
+    this.friendService
+      .getFriend()
+      .subscribe((friend) => {
+        this.friends = friend
+        this.addedFriends = friend
+      })
   }
 
 }
