@@ -29,6 +29,7 @@ import {FriendComponent} from "./components/friend/friend.component";
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule
