@@ -6,7 +6,6 @@ import {LoginComponent} from './components/login/login.component';
 import {HeaderComponent} from './components/header/header.component';
 import {ProfileComponent} from './components/profile/profile.component';
 import {AppRoutingModule} from "./app-routing.module";
-import {FriendModule} from "./components/friend/friend.module"
 import {GamesComponent} from "./components/games/games.component";
 import {LibraryComponent} from "./components/library/library.component";
 import {HttpClientModule} from "@angular/common/http";
@@ -14,30 +13,31 @@ import {UsersService} from "./service/users.service";
 import {FormsModule} from "@angular/forms";
 import {SearchPipe} from "./pipes/search.pipe";
 import {GamesService} from "./service/games.service";
-import { ValidatorService } from './validator.service';
-import { RegComponent } from './components/reg/reg.component';
-import { FormsModule } from '@angular/forms';
+import {FriendComponent} from "./components/friend/friend.component";
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegComponent,
     HeaderComponent,
     ProfileComponent,
     GamesComponent,
+    FriendComponent,
     LibraryComponent,
     SearchPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    FriendModule,
+    AppRoutingModule,
     HttpClientModule,
     FormsModule
   ],
-  providers: [ValidatorService, UsersService, GamesService],
+  providers: [UsersService, GamesService],
+  exports: [
+    SearchPipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -1,6 +1,15 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 
+export interface User {
+  email: string,
+  password: string,
+  username: string,
+  friends: Array<number>,
+  favoriteGames: Array<number>,
+  id: number
+}
+
 @Injectable()
 export class UsersService {
   constructor(private http: HttpClient) {
@@ -11,6 +20,6 @@ export class UsersService {
   // }
 
   getUsers() {
-    return this.http.get('http://localhost:3000/users');
+    return this.http.get<User[]>('https://testing-heroku-kekw.herokuapp.com/user');
   }
 }

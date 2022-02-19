@@ -14,8 +14,7 @@ export class GamesComponent implements OnInit {
   searchGame: string = '';
   value: number = 1500;
 
-  constructor(private gamesService: GamesService) {
-  }
+  constructor(private gamesService: GamesService) {}
 
   ngOnInit(): void {
     this.gamesService.getGames().subscribe((games) => {
@@ -36,7 +35,6 @@ export class GamesComponent implements OnInit {
     if (this.games.length === 0 || searchStr === '') {
       return;
     } else {
-      console.log(this.games);
       this.activeGames = this.games.filter(game => game.name.toLowerCase().indexOf(searchStr.toLowerCase()) !== -1);
     }
   }
