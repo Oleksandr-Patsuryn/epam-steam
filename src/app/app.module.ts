@@ -15,6 +15,7 @@ import { RegComponent } from './components/reg/reg.component';
 import { FormsModule } from '@angular/forms';
 
 import { AddUserService } from 'src/app/add-user-service';
+import { CookiesService } from 'src/app/cookies.service';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { AddUserService } from 'src/app/add-user-service';
   providers: [
     UsersService,
     AddUserService,
+    CookiesService,
   ],
   bootstrap: [AppComponent]
 })

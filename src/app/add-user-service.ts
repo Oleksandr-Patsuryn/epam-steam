@@ -3,7 +3,14 @@ import { HttpClient } from "@angular/common/http";
 import { map } from 'rxjs/operators';
 import { of, pipe } from 'rxjs';
 
-
+export interface User {
+  email: string,
+  password: string,
+  username: string,
+  friends: Array<number>,
+  favoriteGames: Array<number>,
+  id: number
+}
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +28,7 @@ export class AddUserService {
   }
 
   getData(){
-    return this.http.get('http://localhost:3000/users')
+    return this.http.get<User[]>('http://localhost:3000/users')
     //.pipe(map((response: Response) => response.json()));
     //return data;
 

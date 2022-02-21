@@ -1,21 +1,14 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Sasha"
-    },
-    {
-      "id": 2,
-      "name": "Oleksiy"
-    },
-    {
-      "id": 3,
-      "name": "Aleksey"
-    },
-    {
       "email": "lalala@gmail.com",
       "password": "qwerty",
-      "id": 4
+      "id": 1
+    },
+    {
+      "email": "qwerty@g",
+      "password": "1111",
+      "id": 2
     }
   ]
 }
