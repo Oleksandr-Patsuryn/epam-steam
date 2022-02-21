@@ -19,10 +19,11 @@ export class AddUserService {
 
   constructor(private http: HttpClient) { }
 
-  addUser(email:string, password:string) {
+  addUser(email:string, password:string, username:string) {
     const data = {
       email: email,
       password: password,
+      username: username,
     }
     return this.http.post('http://localhost:3000/users', data)
   }

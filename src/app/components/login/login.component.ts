@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
       password: this.password
     }
     let flag:boolean = false;
+    let id:number = 0;
     if(this.email == undefined || this.password == undefined) {
       alert("Please, fill all fields!")
     } else if (this.email == '' || this.password == ''){
@@ -34,26 +35,19 @@ export class LoginComponent implements OnInit {
         this.getUserService
         .getData()
         .subscribe((response) => {
-          //
-          
           for (let key in response) {
-            //console.log(response[key])
             if (user.email === response[key].email && user.password === response[key].password) {
               flag = true;
+              id = response[key].id;
             }
           }
           if (flag === true) {
             //перехід на сторінку games
-            console.log("ITS OK")
-            this.CookiesService.setCookie('user_id','1',15);
-            //document.cookie = "user=John";
-            console.log("ITS OK AGAIN")
+            this.CookiesService.setCookie('user_id',String(id), 15);
           } else {
             alert("Your credentials are incorrect!")
           }
           console.log(this.CookiesService.getCookie('user_id'));
-          
-            
         })
     }
   };

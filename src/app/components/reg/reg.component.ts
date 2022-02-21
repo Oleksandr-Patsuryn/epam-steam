@@ -11,6 +11,7 @@ export class RegComponent implements OnInit {
   email!: string;
   password!: string;
   password2!: string;
+  username!: string;
 
   constructor(private addUserService: AddUserService) {}
 
@@ -28,8 +29,9 @@ export class RegComponent implements OnInit {
       alert('Please, confirm your password!')
     }
       else {
+        this.username = this.email;
         this.addUserService
-        .addUser(this.email, this.password)
+        .addUser(this.email, this.password, this.username)
         .subscribe((json) => {
           console.log(json)
     });

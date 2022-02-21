@@ -9,6 +9,12 @@
       "email": "qwerty@g",
       "password": "1111",
       "id": 2
+    },
+    {
+      "email": "test@ukr.net",
+      "password": "1234",
+      "username": "test@ukr.net",
+      "id": 3
     }
   ]
 }
