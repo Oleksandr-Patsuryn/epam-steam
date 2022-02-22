@@ -13,8 +13,9 @@
     {
       "email": "test@ukr.net",
       "password": "1234",
-      "username": "test@ukr.net",
-      "id": 3
+      "username": "roh",
+      "id": 3,
+      "age": 18
     }
   ]
 }

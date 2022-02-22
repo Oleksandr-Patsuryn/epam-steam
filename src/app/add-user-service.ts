@@ -32,6 +32,12 @@ export class AddUserService {
     return this.http.get<User[]>('http://localhost:3000/users')
     //.pipe(map((response: Response) => response.json()));
     //return data;
+  }
+  editUser(user:any, username: string, age: number) {
+    user.username = username;
+    user.age = age;
+    console.log(user);
+    return this.http.put<any>(`http://localhost:3000/users/3`, user).subscribe(data=>console.log(data));
 
   }
 }
