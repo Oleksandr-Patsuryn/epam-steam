@@ -40,10 +40,5 @@ export class CookiesService {
     let expires = '; expires=' + date.toUTCString();
     document.cookie = name + '=' + '' + expires +'; path=/';
   }
-
-  getUserCookie() {
-    return JSON.parse(<string>this.getCookie('user_id')).id;
-  }
-
   constructor() {}
 }

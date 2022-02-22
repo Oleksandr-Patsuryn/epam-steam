@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { map } from 'rxjs/operators';
-import { of, pipe } from 'rxjs';
 
 export interface User {
   email: string,
@@ -30,14 +28,13 @@ export class AddUserService {
 
   getData(){
     return this.http.get<User[]>('http://localhost:3000/users')
-    //.pipe(map((response: Response) => response.json()));
-    //return data;
   }
+  
   editUser(user:any, username: string, age: number) {
     user.username = username;
     user.age = age;
     console.log(user);
-    return this.http.put<any>(`http://localhost:3000/users/3`, user).subscribe(data=>console.log(data));
+    return this.http.put<any>(`http://localhost:3000/users/${user.id}`, user).subscribe(data=>console.log(data));
 
   }
 }

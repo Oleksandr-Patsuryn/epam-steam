@@ -3,19 +3,30 @@
     {
       "email": "lalala@gmail.com",
       "password": "qwerty",
-      "id": 1
+      "username": "lalala@gmail.com",
+      "id": 1,
+      "age": 18
     },
     {
       "email": "qwerty@g",
       "password": "1111",
-      "id": 2
+      "username": "qwerty@g",
+      "id": 2,
+      "age": 5
     },
     {
-      "email": "test@ukr.net",
-      "password": "1234",
-      "username": "roh",
+      "email": "hello@gmail.com",
+      "password": "112233",
+      "username": "HelloWorld",
       "id": 3,
-      "age": 18
+      "age": 108
+    },
+    {
+      "email": "hello@gmail.com",
+      "password": "onetwo",
+      "username": "world",
+      "id": 4,
+      "age": 21
     }
   ]
 }

@@ -35,22 +35,6 @@ export class RegComponent implements OnInit {
         .subscribe((json) => {
           console.log(json)
     });
-        /*
-      const user = {
-        email: this.email,
-        password: this.password
-      }*/
-      //console.log(user);
-    }
-    
+    }   
   };
-/*
-  addUser() {
-    this.addUserService
-    .addUser(this.email, this.password)
-    .subscribe((json) => {
-      console.log(json)
-    });
-  }*/
-
 }
