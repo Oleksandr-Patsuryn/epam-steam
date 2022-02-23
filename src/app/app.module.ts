@@ -19,6 +19,7 @@ import {GamesService} from "./service/games.service";
 import {FriendComponent} from "./components/friend/friend.component";
 import {SearchPipe} from "./pipes/search.pipe";
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,13 +36,16 @@ import {SearchPipe} from "./pipes/search.pipe";
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule,
+    AppRoutingModule
   ],
   providers: [
     UsersService,
     GamesService,
     AddUserService,
-    CookiesService,
+    CookiesService
+  ],
+  exports: [
+    SearchPipe
   ],
   bootstrap: [AppComponent]
 })

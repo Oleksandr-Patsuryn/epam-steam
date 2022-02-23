@@ -63,3 +63,12 @@
   border-radius: 0 5px 5px 0;
   cursor: pointer;
 }
+
+.friend-list-box {
+  width: 1080px;
+}
+
+.friend-item {
+  display: flex;
+  justify-content: space-between;
+}

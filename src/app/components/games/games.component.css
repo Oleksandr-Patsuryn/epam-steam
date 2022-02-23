@@ -1,5 +1,5 @@
-.container {
-  margin-top: 176px;
+.container-main {
+  margin-top: 120px;
   display: flex;
   align-items: center;
   width: 100vw;
@@ -8,9 +8,33 @@
   font-family: 'Roboto', sans-serif;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+.featured-games {
+  margin: 20px 0;
+}
+
+.games-btn {
+  width: 100%;
+}
+
+.games-list {
+  display: flex;
+}
+
+.games-grid {
+  display: grid;
+  height: 81vh;
+  grid-template-columns: repeat(3, 18vw);
+  grid-template-rows: auto;
+  gap: 10px;
+  overflow: auto;
+}
+
 .games-container {
   width: 1200px;
-  min-height: 780px;
   padding: 20px 45px;
   background: #fff;
 }
@@ -18,4 +42,72 @@
 .games-search {
   display: flex;
   gap: 15px;
+}
+
+.games-card {
+  display: flex;
+  flex-direction: column;
+  width: 18vw;
+  height: 350px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.game-main {
+  position: relative;
+  width: 18vw;
+  height: 160px;
+  background-color: #bdbcff;
+  color: #fff;
+  border-radius: 5px 5px 0 0 ;
+}
+
+.game-name {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+
+.game-price {
+  font-size: 24px;
+  text-transform: uppercase;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+
+.game-secondary {
+  padding: 5px 10px 10px;
+  border: 1px solid #ebebeb;
+  border-radius: 0 0 5px 5px;
+  overflow: hidden;
+}
+
+.game-description {
+  height: 120px;
+  font-size: 14px;
+  overflow: auto;
+}
+
+.games-filter {
+  margin-left: 15px;
+  padding-left: 15px;
+  border-left: 1px solid #a0a0a0;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filter-header {
+  font-size: 18px;
+}
+
+.form-checkbox {
+  margin-bottom: 20px;
+}
+
+.form-check-input {
+  margin-right: 5px;
 }
