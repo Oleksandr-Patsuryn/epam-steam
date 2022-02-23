@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {User, UsersService} from "../../service/users.service";
 
 @Component({
   selector: 'app-friend',
@@ -6,12 +7,15 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./friend.component.css']
 })
 export class FriendComponent implements OnInit {
+  users:  User[] = [];
+  searchUser: string = '';
 
-  @Input() name: string = ''
-
-  constructor() { }
+  constructor(private userService: UsersService) { }
 
   ngOnInit(): void {
+    this.userService.getUsers().subscribe((users) => {
+      this.users = users;
+    })
   }
 
 }
