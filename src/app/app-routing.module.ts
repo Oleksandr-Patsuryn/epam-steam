@@ -4,6 +4,10 @@ import {ProfileComponent} from "./components/profile/profile.component";
 import {FriendComponent} from "./components/friend/friend.component";
 import {LibraryComponent} from "./components/library/library.component";
 import {GamesComponent} from "./components/games/games.component";
+///////////////////////////////////////////////////////////////////////
+import {LoginComponent} from "./components/login/login.component";
+import {RegComponent} from "./components/reg/reg.component";
+
 
 
 const appRoutes: Routes = [
@@ -11,6 +15,8 @@ const appRoutes: Routes = [
   {path: 'library', component: LibraryComponent},
   {path: 'friends', component: FriendComponent},
   {path: 'profile', component: ProfileComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'reg', component: RegComponent},
 ];
 
 @NgModule({
