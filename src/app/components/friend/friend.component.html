@@ -16,7 +16,7 @@
           <li class="list-group-item friend-item" *ngFor="let user of users | search: searchUser">
             <div class="friend">
               <p>{{user.username}}</p>
-              <button class="btn btn-danger">Remove friend</button>
+              <button class="btn btn-danger" (click)="deleteFriend()">Remove friend</button>
             </div>
           </li>
         </ul>

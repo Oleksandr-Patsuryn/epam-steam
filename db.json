@@ -2,15 +2,15 @@
   "users": [
     {
       "id": 1,
-      "name": "Sasha"
+      "username": "Oleksiy"
     },
     {
       "id": 2,
-      "name": "Oleksiy"
+      "username": "Oleksiy"
     },
     {
       "id": 3,
-      "name": "Aleksey"
+      "username": "Aleksey"
     }
   ]
 }

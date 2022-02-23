@@ -7,15 +7,28 @@ import {User, UsersService} from "../../service/users.service";
   styleUrls: ['./friend.component.css']
 })
 export class FriendComponent implements OnInit {
-  users:  User[] = [];
+  users: User[] = [];
   searchUser: string = '';
+  username: string = '';
 
-  constructor(private userService: UsersService) { }
+  constructor(private userService: UsersService) {
+  }
 
   ngOnInit(): void {
     this.userService.getUsers().subscribe((users) => {
       this.users = users;
     })
+  }
+
+  deleteFriend() {
+    this.userService.deleteUser().subscribe((data) =>
+      console.log(data)
+    )
+  }
+
+  addUser() {
+    return this.userService.addUser(this.username)
+    this.username = '';
   }
 
 }
