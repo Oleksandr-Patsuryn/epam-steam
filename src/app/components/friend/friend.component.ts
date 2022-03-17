@@ -11,8 +11,8 @@ export class FriendComponent implements OnInit {
   searchUser: string = '';
   username: string = '';
 
-  constructor(private userService: AddUserService) {
-  }
+
+  constructor(private userService: AddUserService) {}
 
   ngOnInit(): void {
     this.userService.getData().subscribe((users) => {

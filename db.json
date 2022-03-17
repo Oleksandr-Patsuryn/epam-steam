@@ -3,22 +3,22 @@
     {
       "email": "lalala@gmail.com",
       "password": "qwerty",
-      "username": "lalala@gmail.com",
       "id": 1,
+      "username": "Oleksiy"
       "age": 18
     },
     {
       "email": "qwerty@g",
       "password": "1111",
-      "username": "qwerty@g",
       "id": 2,
+      "username": "Oleksiy"
       "age": 5
     },
     {
       "email": "hello@gmail.com",
       "password": "112233",
-      "username": "HelloWorld",
       "id": 3,
+      "username": "Aleksey"
       "age": 108
     },
     {
