@@ -5,16 +5,18 @@
       <div class="search-box">
         <span>Search Friend</span>
         <form action="" class="friend-search" method="get">
-          <input type="text" class="search-text" placeholder="Search" name="searchUser">
+          <input type="text" class="search-text" placeholder="Search" name="searchUser"
+                 [(ngModel)]="searchUser">
           <button class="search-btn" >Search</button>
         </form>
       </div>
       <div class="my-friends">
         <h2>My Friends</h2>
         <ul class="list-group friend-list-box">
-          <li class="list-group-item friend-item">
+          <li class="list-group-item friend-item" *ngFor="let user of users | search: searchUser">
             <div class="friend">
-              <button class="btn btn-danger">Remove friend</button>
+              <p>{{user.username}}</p>
+              <button class="btn btn-danger" (click)="deleteFriend()">Remove friend</button>
             </div>
           </li>
         </ul>
