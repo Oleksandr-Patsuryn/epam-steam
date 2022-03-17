@@ -1,14 +1,5 @@
 import { Injectable } from '@angular/core';
 
-export interface User {
-  email: string,
-  password: string,
-  username: string,
-  friends: Array<number>,
-  favoriteGames: Array<number>,
-  id: number
-}
-
 @Injectable({
   providedIn: 'root',
 })

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {User, UsersService} from "../../service/users.service";
+import {User, AddUserService} from "../../service/add-user-service";
 
 @Component({
   selector: 'app-friend',
@@ -11,24 +11,12 @@ export class FriendComponent implements OnInit {
   searchUser: string = '';
   username: string = '';
 
-  constructor(private userService: UsersService) {
-  }
+
+  constructor(private userService: AddUserService) {}
 
   ngOnInit(): void {
-    this.userService.getUsers().subscribe((users) => {
+    this.userService.getData().subscribe((users) => {
       this.users = users;
     })
   }
-
-  deleteFriend() {
-    this.userService.deleteUser().subscribe((data) =>
-      console.log(data)
-    )
-  }
-
-  addUser() {
-    return this.userService.addUser(this.username)
-    this.username = '';
-  }
-
 }

@@ -1,0 +1,26 @@
+language: node_js
+node_js:
+  - 16
+
+addons:
+  chrome: stable
+
+cache:
+  directories:
+    - ./node_modules
+
+install:
+  - npm install
+
+script:
+  - ng lint
+  - npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+  - ng build --prod
+
+before_deploy:
+  - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install faraday -v 1.8.0
+
+deploy:
+  provider: heroku
+  app: epam-steam-service
+  api_key: 8de91c31-3dfc-493f-9133-11d53afbadbb

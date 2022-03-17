@@ -4,12 +4,14 @@
         <form (submit)="onSubmit()">
             <label for="email">Email</label><br>
             <input #EmailField ="ngModel" required type="email" [(ngModel)]= "email" id="email" name="email" placeholder="Email"><br>
-            <div class="alert-message" [hidden]="EmailField.valid || EmailField.pristine">This field is obligatory!</div>
+            <div class="alert-message" *ngIf="EmailField.invalid && EmailField.touched">This field is obligatory!</div>
             <label for="password">Password</label><br>
             <input #PasswordField ="ngModel" required type="password" [(ngModel)]= "password" id="password" name="password" placeholder="Password"><br>
-            <div class="alert-message-2" [hidden]="PasswordField.valid || PasswordField.pristine">This field is obligatory!</div>
+            <div class="alert-message-2" *ngIf="PasswordField.invalid && PasswordField.touched">This field is obligatory!</div>
             <input type="submit"  class="sign-button" value="Sign In">
         </form>
-        <div class="sign-in-wrapper"><a href="#" class="sign-in">Don`t have an account?<br>Sign up</a></div>
+        <div class="sign-in-wrapper" routerLinkActive="active">
+          <a [routerLink]="'/registration'" class="sign-in">Don`t have an account?<br>Sign up</a>
+        </div>
     </div>
 </div>

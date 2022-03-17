@@ -1,22 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { AddUserService } from 'src/app/add-user-service'
-import { CookiesService } from 'src/app/cookies.service';
+import { AddUserService } from 'src/app/service/add-user-service'
+import { CookiesService } from 'src/app/service/cookies.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
   email!: string;
   password!: string;
 
-  constructor(private getUserService: AddUserService, private CookiesService: CookiesService) {}
+  constructor(private getUserService: AddUserService, private CookiesService: CookiesService,
+              private router: Router
+              ) {}
 
-  ngOnInit(): void {
-  }
-  
   onSubmit() {
     const user = {
       email: this.email,
@@ -41,9 +41,10 @@ export class LoginComponent implements OnInit {
               id = response[key].id;
             }
           }
-          if (flag === true) {
+          if (flag) {
             //перехід на сторінку games
             this.CookiesService.setCookie('user_id',String(id), 15);
+            this.router.navigate(['/games'])
           } else {
             alert("Your credentials are incorrect!")
           }

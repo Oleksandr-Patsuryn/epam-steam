@@ -19,7 +19,7 @@
             </div>
             <div class="game-secondary">
               <p class="game-description">{{game.description}}</p>
-              <a href="#" class="btn btn-primary games-btn">Add to library</a>
+              <a href="#" class="btn btn-primary games-btn" (click)="buyGame()">Add to library</a>
             </div>
         </li>
       </ul>
@@ -36,15 +36,21 @@
         <div class="filter-tag">
           <p class="filter-header">Filter by tag</p>
           <div class="form-checkbox">
-            <input type="checkbox" class="form-check-input" name="indie" value="indie" checked>
+            <input type="checkbox" class="form-check-input" name="indie" value="indie" checked
+            (change)="checkboxFilter($event)"
+            >
             <label class="form-check-label">Indie</label>
           </div>
           <div class="form-checkbox">
-            <input type="checkbox" class="form-check-input" name="action" value="action" checked>
+            <input type="checkbox" class="form-check-input" name="action" value="action" checked
+                   (change)="checkboxFilter($event)"
+            >
             <label class="form-check-label">Action</label>
           </div>
           <div class="form-checkbox">
-            <input type="checkbox" class="form-check-input" name="adventure" value="adventure" checked>
+            <input type="checkbox" class="form-check-input" name="adventure" value="adventure" checked
+                   (change)="checkboxFilter($event)"
+            >
             <label class="form-check-label">Adventure</label>
           </div>
         </div>
