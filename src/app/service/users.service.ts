@@ -12,6 +12,9 @@ export interface User {
 
 @Injectable()
 export class UsersService {
+  users: User[] = [];
+
+
   constructor(private http: HttpClient) {
   }
 
@@ -20,6 +23,20 @@ export class UsersService {
   // }
 
   getUsers() {
-    return this.http.get<User[]>('https://testing-heroku-kekw.herokuapp.com/user');
+    return this.http.get<User[]>(`http://localhost:3000/users/`)
+    // return this.http.get<User[]>('https://testing-heroku-kekw.herokuapp.com/user');
   }
+
+  deleteUser() {
+    return this.http.delete<User[]>(`http://localhost:3000/users/1`)
+  }
+
+  addUser( username : string) {
+    const data = {
+      name: username,
+      email: 'dome@lob.com'
+    }
+    return this.http.post<User[]>(`http://localhost:3000/users/`, {data})
+  }
+
 }
