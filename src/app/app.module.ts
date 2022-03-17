@@ -10,10 +10,14 @@ import {GamesComponent} from "./components/games/games.component";
 import {LibraryComponent} from "./components/library/library.component";
 import {HttpClientModule} from "@angular/common/http";
 import {UsersService} from "./service/users.service";
-import {FormsModule} from "@angular/forms";
-import {SearchPipe} from "./pipes/search.pipe";
+import {FormsModule} from '@angular/forms';
+import {RegComponent} from './components/reg/reg.component';
+
+import {AddUserService} from 'src/app/add-user-service';
+import {CookiesService} from 'src/app/cookies.service';
 import {GamesService} from "./service/games.service";
 import {FriendComponent} from "./components/friend/friend.component";
+import {SearchPipe} from "./pipes/search.pipe";
 
 
 @NgModule({
@@ -21,6 +25,7 @@ import {FriendComponent} from "./components/friend/friend.component";
     AppComponent,
     LoginComponent,
     HeaderComponent,
+    RegComponent,
     ProfileComponent,
     GamesComponent,
     FriendComponent,
@@ -30,11 +35,15 @@ import {FriendComponent} from "./components/friend/friend.component";
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    AppRoutingModule
   ],
-  providers: [UsersService, GamesService],
+  providers: [
+    UsersService,
+    GamesService,
+    AddUserService,
+    CookiesService
+  ],
   exports: [
     SearchPipe
   ],

@@ -9,7 +9,7 @@
     justify-content: center;
     font-family: 'Roboto', sans-serif;
 }
-.login-container, .sign-button {
+.login-container{
     flex-direction: column;
     padding: 60px;
     width: 320px;
@@ -20,9 +20,9 @@
 }
 .login-container {
     flex-direction: column;
-    padding: 40px 60px 70px 60px;
+    padding: 50px 60px 70px 60px;
     width: 320px;
-    height: 340px;
+    height: 420px;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
@@ -31,13 +31,12 @@
     font-weight: 400;
     letter-spacing: 0em;
     text-align: center;
-    padding-bottom: 20px;
+    font-size: 24px;
 }
 #email, #password, #password2 {
-    width: 184px;
-    height: 16px;
+    width: 200px;
     padding: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-radius: 5px;
 }
 .sign-button {
@@ -51,6 +50,8 @@
     width: 202px;
     height: 32px;
     background: #6C69FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
 }
 .sign-in {
     text-decoration:none;
@@ -64,5 +65,16 @@
 }
 .sign-in:hover {
     color: #6C69FF;
+}
+@supports (-webkit-appearance:none) { 
+    .login-container {
+        height: 450px;
+    }
+ }
+.alert-message, .alert-message-2, .alert-message-3 {
+    color: red;
+    margin-top: -5px;
+    text-align: center;
+    font-size: 15px;
 }
 
