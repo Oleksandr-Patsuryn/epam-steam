@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CookiesService } from 'src/app/cookies.service';
-import { AddUserService } from 'src/app/add-user-service';
+import { CookiesService } from 'src/app/service/cookies.service';
+import {AddUserService, User} from 'src/app/service/add-user-service';
 import { HttpClient } from "@angular/common/http";
 
 @Component({
@@ -13,7 +13,7 @@ export class ProfileComponent implements OnInit {
   username!: string;
   email!: string;
   age!: number;
-  Obj!: Object;
+  Obj!: User;
 
   constructor(private CookiesService: CookiesService, private getUserService: AddUserService,private http: HttpClient) { }
   ngOnInit() {
@@ -25,7 +25,9 @@ export class ProfileComponent implements OnInit {
           for (let key in response) {
             if (Number(UserId) === response[key].id) {
               this.Obj = response[key];
+              this.username = response[key].username;
               this.email = response[key].email;
+              this.age = response[key].age;
               break;
             }
           }

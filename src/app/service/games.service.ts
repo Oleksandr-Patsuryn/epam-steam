@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 
 export interface Games {
   name: string,
+  tag: string,
   description: string,
   price: number,
   id: number
@@ -15,10 +16,12 @@ export class GamesService {
 
   createGame() {
     const data = {
-      name: 'The Witcher 3 Wild Hunt',
-      description: 'As war rages on throughout the Northern Realms, you take on the greatest contract of ' +
-        'your life — tracking down the Child of Prophecy, a living weapon that can alter the shape of the world.',
-      price: 540
+      name: "Dota 2",
+      tag: "Action",
+      description: "Dota 2 is a multiplayer online battle arena (MOBA) video game in which two teams " +
+        "of five players compete to collectively destroy a large structure defended by the opposing team" +
+        " known as the \"Ancient\", whilst defending their own.",
+      price: 0
     }
     return this.http.post('https://testing-heroku-kekw.herokuapp.com/games', data)
   }

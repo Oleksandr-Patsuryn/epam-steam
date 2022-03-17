@@ -1,5 +1,4 @@
-import {Component, OnInit} from '@angular/core';
-import {UsersService} from "./service/users.service";
+import {Component} from '@angular/core';
 import {GamesService} from "./service/games.service";
 
 @Component({
@@ -7,28 +6,12 @@ import {GamesService} from "./service/games.service";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'epam-steam';
 
-  users = [];
+  constructor(private gamesService: GamesService) {}
 
-  constructor(private usersService: UsersService, private gamesService: GamesService) {
-  }
-
-  ngOnInit(): void {
-
-  }
-
-  loadUsers() {
-    this.usersService.getUsers().subscribe((users) => {
-        console.log(users);
-      }
-    )
-  }
-
-  addGames() {
-    this.gamesService.createGame().subscribe((games) => {
-      console.log(games);
-    })
+  loadGame(){
+    console.log(this.gamesService.createGame().subscribe());
   }
 }
